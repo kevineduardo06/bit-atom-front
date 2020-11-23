@@ -1,8 +1,7 @@
 
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <img src="assets/img/logo.jpg" width=80 height=60>
-         
+        <img src="assets/img/logo.jpg" width=80 height=60>   
         <span>Bit-Atom Reminder <mat-icon>date_range</mat-icon></span>
         <span class="example-container"></span>
              
@@ -12,8 +11,7 @@
              </button>
              <button href="#" mat-button>
                  <mat-icon>add_circle_outline</mat-icon>
-                 Cadastros
-                 
+                 Cadastros   
              </button>
              <button href="#" mat-button>
                 <mat-icon>assignment</mat-icon>
@@ -28,9 +26,10 @@
                 Meu Perfil
             </button>
 
-             <button href="#" mat-button>
+             <button type="button" name="action" (click)="sair()" mat-button>
                  <mat-icon>login</mat-icon>
                 Sair
                 </button>
+               
       </mat-toolbar-row>
-  
+

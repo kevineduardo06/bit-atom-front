@@ -1,4 +1,6 @@
-
+.example-container{
+  flex: 1 2 auto;
+}
     .container {
         width: 100vw;
         height: 100vh;
@@ -6,7 +8,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center
+        align-items: center;
         }
         .box {
         width: 300px;
@@ -38,7 +40,8 @@
       }
 
       .button {
-        display: center;
-        justify-content: flex-end;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
       }
  

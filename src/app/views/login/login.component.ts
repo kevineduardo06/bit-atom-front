@@ -12,12 +12,18 @@ export class LoginComponent {
     password: new FormControl("")
   });
 
+
   submit() {
     if (this.form.valid) {
-      this.submitEM.emit(this.form.value);
+      this.logou.emit(this.form.value);
     }
   }
+
+  fazerLogin(){
+    this.logou.emit(true);
+  }
+
   @Input() error: string | null;
 
-  @Output() submitEM = new EventEmitter();
+  @Output() logou = new EventEmitter();
 }

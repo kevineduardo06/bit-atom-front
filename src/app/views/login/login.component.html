@@ -1,38 +1,26 @@
-
 <mat-card>
-    <mat-card-title>Login</mat-card-title>
-    
-      
-        <p>
-          <mat-form-field class="mat-card-content">
-            <input
-              type="text"
-              matInput
-              placeholder="Username"
-              formControlName="username"
-            />
-            
-          </mat-form-field>
-        </p>
-        <span class="example-container"></span>
-        <p>
-          <mat-form-field  class="mat-card-content">
-            <input
-              type="password"
-              matInput
-              placeholder="Password"
-              formControlName="password"
-            />
-          </mat-form-field>
-        </p>
+  <mat-card-title>Login</mat-card-title>
 
-        <p *ngIf="error" class="error">
-          {{ error }}
-        </p>
+  <mat-form-field class="mat-card-content">
+    <input type="text" matInput placeholder="Email" formControlName="email" />
 
-       
-          <button  type="submit" class="button" mat-button color="primary"><a routerLink="/home">Login</a></button>
-        
-      
-    
-  </mat-card>
+  </mat-form-field>
+
+
+  <mat-form-field class="mat-card-content">
+    <input type="password" matInput placeholder="Senha" formControlName="senha" />
+
+  </mat-form-field>
+  <button class="button" type="submit" name="action" (click)="fazerLogin()" mat-raised-button color="primary">Login
+  </button>
+  <br>
+  <button class="button" name="action" mat-raised-button color="primary">Cadastrar-se
+  </button>
+
+
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+</mat-card>

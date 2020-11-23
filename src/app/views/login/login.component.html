@@ -1,0 +1,38 @@
+
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    
+      
+        <p>
+          <mat-form-field class="mat-card-content">
+            <input
+              type="text"
+              matInput
+              placeholder="Username"
+              formControlName="username"
+            />
+            
+          </mat-form-field>
+        </p>
+        <span class="example-container"></span>
+        <p>
+          <mat-form-field  class="mat-card-content">
+            <input
+              type="password"
+              matInput
+              placeholder="Password"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <p *ngIf="error" class="error">
+          {{ error }}
+        </p>
+
+       
+          <button  type="submit" class="button" mat-button color="primary"><a routerLink="/home">Login</a></button>
+        
+      
+    
+  </mat-card>

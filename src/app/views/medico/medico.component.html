@@ -32,55 +32,19 @@
 
   </mat-toolbar-row>
 </mat-toolbar>
-<h1>Cadastro Terapia</h1>
+<h1>Cadastro Médico</h1>
 <mat-card class="ajuste-content">
-
-  <ng-form >
+<ng-form>
+<br>
 <label>
   Nome:
-  <br>
   <input type="text" [formControl]="nome">
 </label>
 <br>
-<label>
-  Data Começo:
-  <br>
-  <input type="date" [formControl]="dataComeco">
-</label>
-<br>
-<label>
-  Data Fim:
-  <br>
-  <input type="text" [formControl]="dataFim">
-</label>
-<br>
-<label>
-  Medicamentos:
-  <br>
-  <input type="text" [formControl]="medicamentos">
-</label>
-<br>
-<label>
-  Doses:
-  <br>
-  <input type="text" [formControl]="doses">
-</label>
-<br>
-<label>
-  Horarios:
-  <br>
-  <input type="text" [formControl]="horarios">
-</label>
-<br>
-<label>
-  Medico:
-  <br>
-  <input type="text" [formControl]="medico">
-</label>
-
 <div class="example-button-row">
   <button mat-button color="warn">Cancelar</button>
   <button mat-button color="primary">Salvar</button>
 </div>
-  </ng-form>
+</ng-form>
 </mat-card>
+

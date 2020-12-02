@@ -1,4 +1,14 @@
-<mat-card>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="assets/img/logo.jpg" width=80 height=60>
+    <span>Bit-Atom Reminder <mat-icon>date_range</mat-icon></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-card class="ajuste-content">
+<ng-form>
   <mat-card-title>Login</mat-card-title>
 
   <mat-form-field class="mat-card-content">
@@ -11,16 +21,13 @@
     <input type="password" matInput placeholder="Senha" formControlName="senha" />
 
   </mat-form-field>
-  <button class="button" type="submit" name="action" (click)="fazerLogin()" mat-raised-button color="primary">Login
+
+  <div class="button">
+    <button class="button" name="action" mat-button color="accent">Cadastrar-se
+    </button>
+  <button class="button" type="submit" name="action" (click)="fazerLogin()" mat-button color="primary">Login
   </button>
-  <br>
-  <button class="button" name="action" mat-raised-button color="primary">Cadastrar-se
-  </button>
+  </div>
 
-
-
-  <p *ngIf="error" class="error">
-    {{ error }}
-  </p>
-
+</ng-form>
 </mat-card>

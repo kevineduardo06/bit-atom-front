@@ -1,4 +1,3 @@
-<app-login *ngIf="!isLogado" (logou)="isLogado=true"></app-login>
+<!--<app-login *ngIf="!isLogado" (logou)="isLogado=true"></app-login>-->
 <div *ngIf="isLogado"><router-outlet></router-outlet></div>
-<app-home *ngIf="isLogado" (sair)="isLogado=false"></app-home>
-<div *ngIf="isLogado"><router-outlet></router-outlet></div>
+<app-lista-terapias> </app-lista-terapias>

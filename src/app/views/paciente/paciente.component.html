@@ -1,0 +1,56 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="assets/img/logo.jpg" width=80 height=60>
+    <span>Bit-Atom Reminder <mat-icon>date_range</mat-icon></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<h1>Cadastro Paciente</h1>
+<mat-card class="ajuste-content">
+<ng-form >
+<label>
+  Nome:
+  <br>
+  <input type="text" [formControl]="paciente.nome">
+</label>
+<br>
+<label>
+  Sexo:
+  <br>
+  <input type="text" [formControl]="paciente.sexo">
+</label>
+<br>
+<label>
+  Data de nascimento:
+  <br>
+  <input type="date" [formControl]="paciente.dataNascimento">
+</label>
+<br>
+<label>
+  Email:
+  <br>
+  <input type="text" [formControl]="paciente.email">
+</label>
+<br>
+<label>
+  Senha:
+  <br>
+  <input type="password" [formControl]="paciente.senha">
+</label>
+<br>
+<label>
+  Confirmar senha:
+  <br>
+  <input type="password" [formControl]="confirmarSenha">
+</label>
+<br>
+
+<div class="example-button-row">
+  <button mat-button color="warn">Cancelar</button>
+  <button (click)="salvar()" type="button" mat-button color="primary">Salvar</button>
+</div>
+
+</ng-form>
+</mat-card>
+

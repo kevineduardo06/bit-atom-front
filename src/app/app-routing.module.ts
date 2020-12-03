@@ -9,6 +9,7 @@ import {ListaTerapiasComponent} from './views/lista-terapias/lista-terapias.comp
 import {ListaMedicamentosComponent} from './views/lista-medicamentos/lista-medicamentos.component';
 import {ListaMedicoComponent} from './views/lista-medico/lista-medico.component';
 import {MedicamentoComponent} from './views/medicamento/medicamento.component';
+import {PerfilComponent} from './views/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'meusMedicamentos', component: ListaMedicamentosComponent},
   {path: 'meusMedicos', component: ListaMedicoComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'perfil', component: PerfilComponent},
 
 
 ];

@@ -24,6 +24,7 @@ import { ListaMedicoComponent } from './views/lista-medico/lista-medico.componen
 import { ToolbarComponent } from './views/toolbar/toolbar.component';
 import { ToolbarCompletaComponent } from './views/toolbar-completa/toolbar-completa.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {PerfilComponent} from './views/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ListaMedicamentosComponent,
     ListaMedicoComponent,
     ToolbarComponent,
-    ToolbarCompletaComponent
+    ToolbarCompletaComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

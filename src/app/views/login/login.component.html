@@ -1,10 +1,4 @@
-
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <img src="assets/img/logo.jpg" width=80 height=60>
-    <span>Bit-Atom Reminder <mat-icon>date_range</mat-icon></span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-toolbar></app-toolbar>
 
 
 <mat-card class="ajuste-content">
@@ -23,11 +17,11 @@
   </mat-form-field>
 
   <div class="button">
-    <button class="button" name="action" mat-button color="accent">Cadastrar-se
-    </button>
-  <button class="button" type="submit" name="action" (click)="fazerLogin()" mat-button color="primary">Login
+    <button mat-button color="accent" routerLink="/cadastro" routerLinkActive="active">Cadastrar-se</button>
+  <button class="button" type="submit" routerLink="/home" routerLinkActive="active" name="action" (click)="fazerLogin()" mat-button color="primary">Login
   </button>
   </div>
 
 </ng-form>
 </mat-card>
+

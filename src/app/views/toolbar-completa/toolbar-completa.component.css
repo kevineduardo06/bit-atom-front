@@ -1,0 +1,7 @@
+.ajuste-content {
+  display: flex;
+  justify-content: center;
+}
+.example-container{
+  flex: 1 2 auto;
+}

@@ -19,7 +19,11 @@ import { MedicamentoComponent } from './views/medicamento/medicamento.component'
 import { MedicoComponent } from './views/medico/medico.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { ListaTerapiasComponent } from './views/lista-terapias/lista-terapias.component';
-
+import { ListaMedicamentosComponent } from './views/lista-medicamentos/lista-medicamentos.component';
+import { ListaMedicoComponent } from './views/lista-medico/lista-medico.component';
+import { ToolbarComponent } from './views/toolbar/toolbar.component';
+import { ToolbarCompletaComponent } from './views/toolbar-completa/toolbar-completa.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { ListaTerapiasComponent } from './views/lista-terapias/lista-terapias.co
     PacienteComponent,
     MedicamentoComponent,
     MedicoComponent,
-    ListaTerapiasComponent
+    ListaTerapiasComponent,
+    ListaMedicamentosComponent,
+    ListaMedicoComponent,
+    ToolbarComponent,
+    ToolbarCompletaComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,8 @@ import { ListaTerapiasComponent } from './views/lista-terapias/lista-terapias.co
     MatFormFieldModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="assets/img/logo.jpg" width=80 height=60>
+    <span>Bit-Atom Reminder <mat-icon>date_range</mat-icon></span>
+    <span class="example-container"></span>
+
+    <button routerLink="/home" routerLinkActive="active" mat-button>
+      <mat-icon>home</mat-icon>
+      Inicio
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu"> <mat-icon>add_circle_outline</mat-icon> Cadastros</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/cadastrarTerapia" routerLinkActive="active">Terapia</button>
+      <button mat-menu-item routerLink="/cadastrarMedicamento" routerLinkActive="active">Medicamento</button>
+      <button mat-menu-item routerLink="/cadastrarMedico" routerLinkActive="active">Medico</button>
+    </mat-menu>
+
+
+    <button routerLink="/minhasTerapias" routerLinkActive="active" mat-button>
+      <mat-icon>assignment</mat-icon>
+      Minhas Terapias
+    </button>
+    <button routerLink="/meusMedicos" routerLinkActive="active" mat-button>
+      <mat-icon>local_hospital</mat-icon>
+      Medicos
+    </button>
+    <button routerLink="" routerLinkActive="active" mat-button>
+      <mat-icon>account_circle</mat-icon>
+      Meu Perfil
+    </button>
+
+    <button routerLink="" routerLinkActive="active" mat-button>
+      <mat-icon>login</mat-icon>
+      Sair
+    </button>
+
+  </mat-toolbar-row>
+</mat-toolbar>

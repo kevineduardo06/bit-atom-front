@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FormControl, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-medico',
@@ -8,6 +8,11 @@ import { FormControl } from '@angular/forms';
 })
 export class MedicoComponent {
 
-  nome = new FormControl('');
+
+@ViewChild('medicoForm' ) medicoForm: NgForm;
+
+  salvar(){
+    console.log(this.medicoForm.value.nome);
+  }
 
 }

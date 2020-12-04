@@ -1,3 +1,46 @@
 <app-toolbar-completa></app-toolbar-completa>
 <br>
 <h1> Meu Perfil</h1>
+
+<mat-card class="ajuste-content">
+  <ng-form >
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Nome" formControlName="nome" />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-card-content">
+      <input type="text" matInput placeholder="Sexo" formControlName="sexo" />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-card-content">
+      <input type="date" matInput placeholder="Data de nascimento" formControlName="dataNascimento" />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-card-content">
+      <input type="email" matInput placeholder="Email" formControlName="email" />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-card-content">
+      <input type="password" matInput placeholder="Senha" formControlName="senha" />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-card-content">
+      <input type="password" matInput placeholder="Confirmar Senha" formControlName="confirmarSenha" />
+
+    </mat-form-field>
+    <br>
+
+    <div class="example-button-row">
+      <button mat-button color="warn" routerLink="/home" routerLinkActive="active">Voltar</button>
+      <button mat-button color="forest" routerLink="/perfil" routerLinkActive="active">Editar</button>
+      <button (click)="salvar()" type="button" mat-button color="primary" routerLink="/perfil" routerLinkActive="active">Salvar</button>
+    </div>
+
+  </ng-form>
+</mat-card>
+

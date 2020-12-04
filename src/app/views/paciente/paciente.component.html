@@ -4,41 +4,35 @@
 <h1>Cadastro Paciente</h1>
 <mat-card class="ajuste-content">
 <ng-form >
-<label>
-  Nome:
-  <br>
-  <input type="text"  [formControl]="paciente.nome">
-</label>
+  <mat-form-field class="mat-form-field">
+    <input type="text" matInput placeholder="Nome" formControlName="nome" />
+
+  </mat-form-field>
 <br>
-<label>
-  Sexo:
-  <br>
-  <input type="text"  [formControl]="paciente.sexo">
-</label>
+  <mat-form-field class="mat-card-content">
+    <input type="text" matInput placeholder="Sexo" formControlName="sexo" />
+
+  </mat-form-field>
 <br>
-<label>
-  Data de nascimento:
-  <br>
-  <input type="date" [formControl]="paciente.dataNascimento">
-</label>
+  <mat-form-field class="mat-card-content">
+    <input type="date" matInput placeholder="Data de nascimento" formControlName="dataNascimento" />
+
+  </mat-form-field>
 <br>
-<label>
-  Email:
-  <br>
-  <input type="text" placeholder="nome@gmail.com" [formControl]="paciente.email">
-</label>
+  <mat-form-field class="mat-card-content">
+    <input type="email" matInput placeholder="Email" formControlName="email" />
+
+  </mat-form-field>
 <br>
-<label>
-  Senha:
-  <br>
-  <input type="password" [formControl]="paciente.senha">
-</label>
+  <mat-form-field class="mat-card-content">
+    <input type="password" matInput placeholder="Senha" formControlName="senha" />
+
+  </mat-form-field>
 <br>
-<label>
-  Confirmar senha:
-  <br>
-  <input type="password" [formControl]="confirmarSenha">
-</label>
+  <mat-form-field class="mat-card-content">
+    <input type="password" matInput placeholder="Confirmar Senha" formControlName="confirmarSenha" />
+
+  </mat-form-field>
 <br>
 
 <div class="example-button-row">

@@ -5,87 +5,71 @@
 <mat-card class="ajuste-content">
 
   <ng-form >
-<label>
-  Nome:
-  <br>
-  <input type="text" [formControl]="nome">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Nome" formControlName="nome" />
+    </mat-form-field>
 <br>
-<label>
-  Data Começo:
-  <br>
-  <input type="date" [formControl]="dataComeco">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="date" matInput placeholder="Data Comeco" formControlName="dataComeco" />
+
+    </mat-form-field>
 <br>
-<label>
-  Data Fim:
-  <br>
-  <input type="date" [formControl]="dataFim">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="date" matInput placeholder="Data fim" formControlName="dataFim" />
+
+    </mat-form-field>
 <br>
 <br>
-<label>
-  Medicamento :
-  <br>
-  <input type="text" [formControl]="medicamentos">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoUm" />
+
+    </mat-form-field>
 <br>
-<label>
-  Dose(mg):
-  <br>
-  <input type="text" [formControl]="doses">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="number" matInput placeholder="Dose" formControlName="doseUm" />
+
+    </mat-form-field>
 <br>
-<label>
-  Intervalo:
-  <br>
-  <input type="time" [formControl]="horarios">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloUm" />
+
+    </mat-form-field>
 <br>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoDois" />
+
+    </mat-form-field>
+<br>
+    <mat-form-field class="mat-form-field">
+      <input type="number" matInput placeholder="Dose" formControlName="doseDois" />
+
+    </mat-form-field>
     <br>
-    <label>
-      Medicamento :
-      <br>
-      <input type="text" [formControl]="medicamentos">
-    </label>
+    <mat-form-field class="mat-form-field">
+      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloDois" />
+
+    </mat-form-field>
+
     <br>
-    <label>
-      Dose(mg):
-      <br>
-      <input type="text" [formControl]="doses">
-    </label>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoDois" />
+
+    </mat-form-field>
     <br>
-    <label>
-      Intervalo:
-      <br>
-      <input type="time" [formControl]="horarios">
-    </label>
+    <mat-form-field class="mat-form-field">
+      <input type="number" matInput placeholder="Dose" formControlName="doseDois" />
+
+    </mat-form-field>
     <br>
+    <mat-form-field class="mat-form-field">
+      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloDois" />
+
+    </mat-form-field>
     <br>
-    <label>
-      Medicamento :
-      <br>
-      <input type="text" [formControl]="medicamentos">
-    </label>
-    <br>
-    <label>
-      Dose(mg):
-      <br>
-      <input type="text" [formControl]="doses">
-    </label>
-    <br>
-    <label class="">
-      Intervalo:
-      <br>
-      <input type="time" [formControl]="horarios">
-    </label>
-    <br>
-    <br>
-<label>
-  Medico:
-  <br>
-  <input type="text" [formControl]="medico">
-</label>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Medico" formControlName="medico" />
+
+    </mat-form-field>
 <br>
 <div class="example-button-row">
   <button mat-button color="warn" routerLink="/home" routerLinkActive="active">Cancelar</button>

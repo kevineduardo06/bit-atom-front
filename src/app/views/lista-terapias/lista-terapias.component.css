@@ -5,3 +5,8 @@
 .example-container{
   flex: 1 2 auto;
 }
+.mat-card-title,
+.mat-card-content {
+  display: flex;
+  justify-content: center;
+}

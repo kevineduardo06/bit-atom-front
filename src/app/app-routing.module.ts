@@ -12,6 +12,7 @@ import {MedicamentoComponent} from './views/medicamento/medicamento.component';
 import {PerfilComponent} from './views/perfil/perfil.component';
 import {EditaMedicoComponent} from './views/edita-medico/edita-medico.component';
 import {EditaMedicamentoComponent} from './views/edita-medicamento/edita-medicamento.component';
+import {EditaTerapiaComponent} from './views/edita-terapia/edita-terapia.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'perfil', component: PerfilComponent},
   {path: 'editarMedico/:id', component: EditaMedicoComponent},
-  {path: 'editarTerapia/:id', component: EditaMedicoComponent},
+  {path: 'editarTerapia/:id', component: EditaTerapiaComponent},
   {path: 'editarMedicamento/:id', component: EditaMedicamentoComponent},
 
 

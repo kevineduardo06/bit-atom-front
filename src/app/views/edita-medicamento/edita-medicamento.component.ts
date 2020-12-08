@@ -23,8 +23,12 @@ export class EditaMedicamentoComponent implements OnInit {
   consultar(id: number) {
     this.medicamentoService.consultar(id).subscribe(
       response =>
-        this.medicamentoForm.form.patchValue({nome: response['nome']})
-
+        this.medicamentoForm.form.patchValue({
+          nome: response['nome'],
+          sintomaUm: response['sintomaUm'],
+          sintomaDois: response['sintomaDois'],
+          sintomaTres: response['sintomaTres']
+        }),
     );
   }
 

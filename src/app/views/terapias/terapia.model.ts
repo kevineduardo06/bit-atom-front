@@ -3,8 +3,8 @@ export class Terapia{
   constructor(
    public id?: number,
   public nome?: string,
-  public dataComeco?: Date,
-  public dataFim?: Date,
+  public inicioTerapia?: Date,
+  public fimTerapia?: Date,
   public medicamentoUm?: string,
   public doseUm?: number,
   public intervaloUm?: number,

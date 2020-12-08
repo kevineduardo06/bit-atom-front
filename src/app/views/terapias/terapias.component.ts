@@ -17,11 +17,11 @@ export class TerapiasComponent {
   }
 
   salvar(){
-
+    console.log(this.terapiasForm.value);
     const terapia = new Terapia( );
     terapia.nome = this.terapiasForm.value.nome;
-    terapia.dataComeco = this.terapiasForm.value.dataComeco;
-    terapia.dataFim = this.terapiasForm.value.dataFim;
+    terapia.inicioTerapia = this.terapiasForm.value.dataComeco;
+    terapia.fimTerapia = this.terapiasForm.value.dataFim;
     terapia.medicamentoUm = this.terapiasForm.value.medicamentoUm;
     terapia.doseUm = this.terapiasForm.value.doseUm;
     terapia.intervaloUm = this.terapiasForm.value.intervaloUm;

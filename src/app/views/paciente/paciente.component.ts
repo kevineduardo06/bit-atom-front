@@ -21,11 +21,12 @@ export class PacienteComponent {
   salvar() {
 
     const paciente = new Paciente();
-    paciente.nome = this.pacienteForm.value.nome;
+    paciente.nomePaciente = this.pacienteForm.value.nome;
     paciente.sexo = this.pacienteForm.value.sexo;
     paciente.dataNascimento = this.pacienteForm.value.dataNascimento;
     paciente.email = this.pacienteForm.value.email;
     paciente.senha = this.pacienteForm.value.senha;
+
 
     this.pacienteService.salvar(paciente).subscribe(
       () => this.router.navigate([''])

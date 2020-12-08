@@ -3,34 +3,34 @@
 <h1> Meu Perfil</h1>
 
 <mat-card class="ajuste-content">
-  <ng-form >
+  <form (ngSubmit)="salvar()" #pacienteForm="ngForm" >
     <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Nome" formControlName="nome" />
+      <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-card-content">
-      <input type="text" matInput placeholder="Sexo" formControlName="sexo" />
+      <input type="text" matInput placeholder="Sexo" name="sexo" id="sexo" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-card-content">
-      <input type="date" matInput placeholder="Data de nascimento" formControlName="dataNascimento" />
+      <input type="date" matInput placeholder="Data de nascimento" name="dataNascimento" id="dataNascimento" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-card-content">
-      <input type="email" matInput placeholder="Email" formControlName="email" />
+      <input type="email" matInput placeholder="Email" name="email" id="email" ngModel/>
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-card-content">
-      <input type="password" matInput placeholder="Senha" formControlName="senha" />
+      <input type="password" matInput placeholder="Senha" name="senha" id="senha" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-card-content">
-      <input type="password" matInput placeholder="Confirmar Senha" formControlName="confirmarSenha" />
+      <input type="password" matInput placeholder="Confirmar Senha" name="confirmarSenha" id="confirmarSenha" ngModel />
 
     </mat-form-field>
     <br>
@@ -41,6 +41,6 @@
       <button (click)="salvar()" type="button" mat-button color="primary" routerLink="/perfil" routerLinkActive="active">Salvar</button>
     </div>
 
-  </ng-form>
+  </form>
 </mat-card>
 

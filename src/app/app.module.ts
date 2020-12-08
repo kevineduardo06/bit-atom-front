@@ -28,6 +28,7 @@ import {PerfilComponent} from './views/perfil/perfil.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EditaTerapiaComponent } from './views/edita-terapia/edita-terapia.component';
 import { EditaMedicoComponent } from './views/edita-medico/edita-medico.component';
+import { EditaMedicamentoComponent } from './views/edita-medicamento/edita-medicamento.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { EditaMedicoComponent } from './views/edita-medico/edita-medico.componen
     PerfilComponent,
     EditaTerapiaComponent,
     EditaMedicoComponent,
+    EditaMedicamentoComponent,
   ],
   imports: [
     BrowserModule,

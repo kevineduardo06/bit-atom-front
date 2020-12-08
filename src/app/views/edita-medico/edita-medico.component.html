@@ -1,0 +1,32 @@
+<app-toolbar-completa></app-toolbar-completa>
+
+
+
+<h1>Editar Médico</h1>
+<mat-card class="ajuste-content">
+  <form (ngSubmit)="salvar()" #medicoForm="ngForm" >
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel  />
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Sintoma" name="sintomaUm" id="sintomaUm" ngModel />
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Sintoma" name="sintomaDois" id="sintomaDois" ngModel />
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Sintoma" name="sintomaTres" id="sintomaTres" ngModel />
+    </mat-form-field>
+    <br>
+    <div class="example-button-row">
+      <button mat-button color="warn" routerLink="/home" routerLinkActive="active">Cancelar</button>
+      <button mat-button color="primary" type="submit"  >Salvar</button>
+    </div>
+
+  </form>
+</mat-card>
+

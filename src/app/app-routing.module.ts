@@ -18,7 +18,7 @@ const routes: Routes = [
 
 
   {path: '', component: LoginComponent, pathMatch: 'full'},
-  {path: 'cadastro', component: PacienteComponent},
+  {path: 'paciente', component: PacienteComponent},
   {path: 'cadastrarTerapia', component: TerapiasComponent},
   {path: 'cadastrarMedicamento', component: MedicamentoComponent},
   {path: 'cadastrarMedico', component: MedicoComponent},

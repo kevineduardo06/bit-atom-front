@@ -37,13 +37,13 @@ export class EditaMedicamentoComponent implements OnInit {
     );
   }
 
-  salvar(){
-
-    const medicamento = new Medicamento( );
+  salvar() {
+    const medicamento = new Medicamento();
     medicamento.nome = this.medicamentoForm.value.nome;
     medicamento.sintomaUm = this.medicamentoForm.value.sintomaUm;
     medicamento.sintomaDois = this.medicamentoForm.value.sintomaDois;
     medicamento.sintomaTres = this.medicamentoForm.value.sintomaTres;
+    medicamento.id = this.id;
     this.medicamentoService.salvar(medicamento).subscribe(
       () => this.router.navigate(['/meusMedicamentos'])
     );

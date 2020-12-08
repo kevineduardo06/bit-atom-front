@@ -2,5 +2,25 @@
 <h1>Meus Médicos</h1>
 
 <mat-card class="mat-card-content">
+  <table >
+    <thead>
+    <tr >
+
+      <th>Nome</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let medico of medicos ">
+      <td>{{medico.nome}}</td>
+      <td>
+      <button mat-button color="warn" (click)="excluir(medico.id)">Excluir</button>
+      <button mat-button color="forest" (click)="editar(medico.id)">Editar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
 
 </mat-card>

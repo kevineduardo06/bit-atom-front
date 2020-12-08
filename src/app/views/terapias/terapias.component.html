@@ -4,76 +4,74 @@
 <h1>Cadastro Terapia</h1>
 <mat-card class="ajuste-content">
 
-  <ng-form >
+  <form (ngSubmit)="salvar()" #terapiasForm>
     <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Nome" formControlName="nome" />
+      <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel />
     </mat-form-field>
 <br>
     <mat-form-field class="mat-form-field">
-      <input type="date" matInput placeholder="Data Comeco" formControlName="dataComeco" />
+      <input type="date" matInput placeholder="Data Comeco" name="dataComeco" id="dataComeco" ngModel />
 
     </mat-form-field>
 <br>
     <mat-form-field class="mat-form-field">
-      <input type="date" matInput placeholder="Data fim" formControlName="dataFim" />
+      <input type="date" matInput placeholder="Data fim" name="dataFim" id="dataFim" ngModel />
 
     </mat-form-field>
 <br>
 <br>
     <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoUm" />
+      <input type="text" matInput placeholder="Medicamento" name="medicamentoUm" id="medicamentoUm" ngModel />
 
     </mat-form-field>
 <br>
     <mat-form-field class="mat-form-field">
-      <input type="number" matInput placeholder="Dose" formControlName="doseUm" />
+      <input type="number" matInput placeholder="Dose" name="doseUm" id="doseUm" ngModel />
 
     </mat-form-field>
 <br>
     <mat-form-field class="mat-form-field">
-      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloUm" />
-
-    </mat-form-field>
-<br>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoDois" />
-
-    </mat-form-field>
-<br>
-    <mat-form-field class="mat-form-field">
-      <input type="number" matInput placeholder="Dose" formControlName="doseDois" />
+      <input type="time" matInput placeholder="Intervalo" name="intervaloUm" id="intervaloUm" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloDois" />
-
-    </mat-form-field>
-
-    <br>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" formControlName="medicamentoDois" />
+      <input type="text" matInput placeholder="Medicamento" name="medicamentoDois" id="medicamentoDois" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="number" matInput placeholder="Dose" formControlName="doseDois" />
+      <input type="number" matInput placeholder="Dose" name="doseDois" id="doseDois" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="time" matInput placeholder="Intervalo" formControlName="intervaloDois" />
+      <input type="time" matInput placeholder="Intervalo" name="intervaloDois" id="intervaloDois" ngModel />
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medico" formControlName="medico" />
+      <input type="text" matInput placeholder="Medicamento" name="medicamentoTres" id="medicamentoTres" ngModel />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="number" matInput placeholder="Dose" name="doseTres" id="doseTres" ngModel />
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="mat-form-field">
+      <input type="time" matInput placeholder="Intervalo" name="intervaloTres" id="intervaloTres" ngModel />
+
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <input type="text" matInput placeholder="Medico" name="medico" id="medico" ngModel />
 
     </mat-form-field>
 <br>
 <div class="example-button-row">
   <button mat-button color="warn" routerLink="/home" routerLinkActive="active">Cancelar</button>
-  <button mat-button color="primary" routerLink="/minhasTerapias" routerLinkActive="active">Salvar</button>
+  <button mat-button color="primary" type="submit">Salvar</button>
 </div>
-  </ng-form>
+  </form>
 </mat-card>

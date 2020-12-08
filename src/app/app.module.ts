@@ -25,6 +25,9 @@ import { ToolbarComponent } from './views/toolbar/toolbar.component';
 import { ToolbarCompletaComponent } from './views/toolbar-completa/toolbar-completa.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {PerfilComponent} from './views/perfil/perfil.component';
+import {HttpClientModule} from '@angular/common/http';
+import { EditaTerapiaComponent } from './views/edita-terapia/edita-terapia.component';
+import { EditaMedicoComponent } from './views/edita-medico/edita-medico.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import {PerfilComponent} from './views/perfil/perfil.component';
     ToolbarComponent,
     ToolbarCompletaComponent,
     PerfilComponent,
+    EditaTerapiaComponent,
+    EditaMedicoComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import {PerfilComponent} from './views/perfil/perfil.component';
     ReactiveFormsModule,
     MatToolbarModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

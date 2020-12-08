@@ -8,6 +8,8 @@ import { FormControl } from '@angular/forms';
 })
 export class PerfilComponent {
 
-
+salvar(){
+  console.log();
+}
 
 }

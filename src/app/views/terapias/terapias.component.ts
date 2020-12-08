@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import { FormControl, NgForm } from '@angular/forms';
+import {Router} from '@angular/router';
+import {TerapiasService} from '../../services/terapias.service';
+import {Terapia} from './terapia.model';
 
 @Component({
   selector: 'app-terapias',
@@ -8,12 +11,30 @@ import { FormControl } from '@angular/forms';
 })
 export class TerapiasComponent {
 
-  nome = new FormControl('');
-  dataComeco = new FormControl('');
-  dataFim = new FormControl('');
-  medicamentos = new FormControl('');
-  doses = new FormControl('');
-  horarios = new FormControl('');
-  medico = new FormControl('');
+  @ViewChild('terapiasForm', {static: false}) terapiasForm: NgForm;
+
+  constructor(private terapiasService: TerapiasService , private router: Router) {
+  }
+
+  salvar(){
+
+    const terapia = new Terapia( );
+    terapia.nome = this.terapiasForm.value.nome;
+    terapia.dataComeco = this.terapiasForm.value.dataComeco;
+    terapia.dataFim = this.terapiasForm.value.dataFim;
+    terapia.medicamentoUm = this.terapiasForm.value.medicamentoUm;
+    terapia.doseUm = this.terapiasForm.value.doseUm;
+    terapia.intervaloUm = this.terapiasForm.value.intervaloUm;
+    terapia.medicamentoDois = this.terapiasForm.value.medicamentoDois;
+    terapia.doseDois = this.terapiasForm.value.doseDois;
+    terapia.intervaloDois = this.terapiasForm.value.intervaloDois;
+    terapia.medicamentoTres = this.terapiasForm.value.medicamentoTres;
+    terapia.doseTres = this.terapiasForm.value.doseTres;
+    terapia.intervaloTres = this.terapiasForm.value.intervaloTres;
+    terapia.medico = this.terapiasForm.value.medico;
+    this.terapiasService.salvar(terapia).subscribe(
+      () => this.router.navigate(['/minhasTerapias'])
+    );
+  }
 
 }

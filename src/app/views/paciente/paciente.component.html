@@ -9,10 +9,13 @@
 
   </mat-form-field>
 <br>
-  <mat-form-field class="mat-card-content">
-    <input type="text" matInput placeholder="Sexo" name="sexo" id="sexo" ngModel  />
-
-  </mat-form-field>
+    <label>Sexo: </label>
+<br>
+    <mat-radio-group aria-label="Select an option" name="sexo" id="sexo" ngModel >
+      <mat-radio-button value="M">Masculino</mat-radio-button>
+      <mat-radio-button value="F">Feminino</mat-radio-button>
+    </mat-radio-group>
+    <br>
 <br>
   <mat-form-field class="mat-card-content">
     <input type="date" matInput placeholder="Data de nascimento" name="dataNascimento" id="dataNascimento" ngModel  />

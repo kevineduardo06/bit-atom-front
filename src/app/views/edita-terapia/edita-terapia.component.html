@@ -20,9 +20,13 @@
     </mat-form-field>
     <br>
     <br>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" name="medicamentoUm" id="medicamentoUm" ngModel/>
-
+    <mat-form-field appearance="fill">
+      <mat-label>Medicamento</mat-label>
+      <mat-select name="medicamentoUm" id="medicamentoUm" ngModel>
+        <mat-option *ngFor="let medicamento of medicamentos" [value]="medicamento">
+          {{medicamento.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
@@ -35,9 +39,13 @@
 
     </mat-form-field>
     <br>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" name="medicamentoDois" id="medicamentoDois" ngModel/>
-
+    <mat-form-field appearance="fill">
+      <mat-label>Medicamento</mat-label>
+      <mat-select name="medicamentoDois" id="medicamentoDois" ngModel>
+        <mat-option *ngFor="let medicamento of medicamentos" [value]="medicamento">
+          {{medicamento.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
@@ -50,9 +58,13 @@
 
     </mat-form-field>
     <br>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medicamento" name="medicamentoTres" id="medicamentoTres" ngModel/>
-
+    <mat-form-field appearance="fill">
+      <mat-label>Medicamento</mat-label>
+      <mat-select name="medicamentoTres" id="medicamentoTres" ngModel>
+        <mat-option *ngFor="let medicamento of medicamentos" [value]="medicamento">
+          {{medicamento.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
@@ -64,8 +76,14 @@
       <input type="time" matInput placeholder="Intervalo" name="intervaloTres" id="intervaloTres" ngModel/>
 
     </mat-form-field>
-    <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Medico" name="medico" id="medico" ngModel/>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Medico</mat-label>
+      <mat-select name="medico" id="medico" ngModel>
+        <mat-option *ngFor="let medico of medicos" [value]="medico">
+          {{medico.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <div class="example-button-row">
       <button mat-button color="warn" routerLink="/minhasTerapias" routerLinkActive="active">Cancelar</button>

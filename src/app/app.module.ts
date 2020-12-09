@@ -29,6 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { EditaTerapiaComponent } from './views/edita-terapia/edita-terapia.component';
 import { EditaMedicoComponent } from './views/edita-medico/edita-medico.component';
 import { EditaMedicamentoComponent } from './views/edita-medicamento/edita-medicamento.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -49,22 +51,24 @@ import { EditaMedicamentoComponent } from './views/edita-medicamento/edita-medic
     EditaMedicoComponent,
     EditaMedicamentoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    FormsModule,
-    MatMenuModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        FormsModule,
+        MatMenuModule,
+        HttpClientModule,
+        MatRadioModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

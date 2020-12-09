@@ -4,6 +4,7 @@
 }
 .example-container{
   flex: 1 2 auto;
+  display: flex;
 }
 .mat-form-field {
   width: 100%;

@@ -3,6 +3,10 @@ import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {TerapiasService} from '../../services/terapias.service';
 import {Terapia} from '../terapias/terapia.model';
+import {Medicamento} from '../medicamento/medicamento.model';
+import {Medico} from '../medico/medico.model';
+import {MedicoService} from '../../services/medico.service';
+import {MedicamentoService} from '../../services/medicamento.service';
 
 @Component({
   selector: 'app-edita-terapia',
@@ -13,11 +17,32 @@ export class EditaTerapiaComponent implements OnInit {
 
   @ViewChild('terapiasForm', {static: false}) terapiasForm: NgForm;
   private id: number;
+  medicamentos: Medicamento[];
+  medicos: Medico[];
 
   constructor(
     private terapiasService: TerapiasService,
     private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private medicoService: MedicoService,
+    private medicamentoService: MedicamentoService
+    ) {
+  }
+  ngOnInit() {
+    this.medicamentoService.buscarTodos()
+      .subscribe(
+        response => this.medicamentos = (response as Medicamento[]));
+
+    this.medicoService.buscarTodos()
+      .subscribe(
+        response => this.medicos = (response as Medico[]));
+
+    this.route.params.subscribe(
+      params => {
+        this.id = params.id;
+        this.consultar(params.id);
+      }
+    );
   }
 
   consultar(id: number) {
@@ -42,14 +67,7 @@ export class EditaTerapiaComponent implements OnInit {
     );
   }
 
-  ngOnInit() {
-    this.route.params.subscribe(
-      params => {
-        this.id = params.id;
-        this.consultar(params.id);
-      }
-    );
-  }
+
 
   salvar() {
     const terapia = new Terapia();

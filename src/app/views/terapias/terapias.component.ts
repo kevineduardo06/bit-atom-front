@@ -7,6 +7,7 @@ import {Medicamento} from '../medicamento/medicamento.model';
 import {Medico} from '../medico/medico.model';
 import {MedicoService} from '../../services/medico.service';
 import {MedicamentoService} from '../../services/medicamento.service';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-terapias',
@@ -23,7 +24,8 @@ export class TerapiasComponent implements OnInit {
     private terapiasService: TerapiasService,
     private router: Router,
     private medicoService: MedicoService,
-    private medicamentoService: MedicamentoService
+    private medicamentoService: MedicamentoService,
+
   ) {
   }
 
@@ -53,6 +55,7 @@ export class TerapiasComponent implements OnInit {
     terapia.doseTres = this.terapiasForm.value.doseTres;
     terapia.intervaloTres = this.terapiasForm.value.intervaloTres;
     terapia.medico = this.terapiasForm.value.medico;
+    terapia.idPaciente = LoginService.idLogado;
     this.terapiasService.salvar(terapia).subscribe(
       () => this.router.navigate(['/minhasTerapias'])
     );

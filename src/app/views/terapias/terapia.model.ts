@@ -15,6 +15,7 @@ export class Terapia{
   public doseTres?: number,
   public intervaloTres?: number,
   public medico?: string,
+   public idPaciente?: number
 
 
 

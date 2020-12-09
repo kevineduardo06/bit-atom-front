@@ -1,5 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {FormControl, FormGroup, NgForm} from '@angular/forms';
+import {MedicamentoService} from '../../services/medicamento.service';
+import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
+import {Medicamento} from '../medicamento/medicamento.model';
+import {Usuario} from './login.model';
 
 @Component({
   selector: 'app-login',
@@ -7,23 +12,28 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  form: FormGroup = new FormGroup({
-    username: new FormControl(""),
-    password: new FormControl("")
-  });
+  @ViewChild('loginForm', {static: false}) loginForm: NgForm;
 
+  constructor(private loginService: LoginService, private router: Router){
 
-  submit() {
-    if (this.form.valid) {
-      this.logou.emit(this.form.value);
+  }
+
+    logar(){
+      const logar = new Usuario( );
+      logar.email = this.loginForm.value.email;
+      logar.senha = this.loginForm.value.senha;
+      this.loginService.logar(logar).subscribe(
+        (response) => {
+
+          if(response != null){
+            LoginService.idLogado = (response as number);
+            this.router.navigate(['/home']);
+          }
+
+        }
+      );
     }
-  }
 
-  fazerLogin(){
-    this.logou.emit(true);
-  }
 
-  @Input() error: string | null;
 
-  @Output() logou = new EventEmitter();
 }

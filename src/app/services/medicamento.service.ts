@@ -8,6 +8,8 @@ import {Medico} from '../views/medico/medico.model';
 })
 export class MedicamentoService {
 
+
+
   url = 'http://localhost:8080/api/medicamento';
   constructor(private http: HttpClient ) { }
 

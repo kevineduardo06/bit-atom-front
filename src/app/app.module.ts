@@ -31,6 +31,7 @@ import { EditaMedicoComponent } from './views/edita-medico/edita-medico.componen
 import { EditaMedicamentoComponent } from './views/edita-medicamento/edita-medicamento.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {MatSelectModule} from '@angular/material/select';
         MatMenuModule,
         HttpClientModule,
         MatRadioModule,
-        MatSelectModule
+        MatSelectModule,
+        MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

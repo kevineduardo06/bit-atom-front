@@ -5,35 +5,35 @@
 <mat-card class="ajuste-content">
   <form (ngSubmit)="salvar()" #pacienteForm="ngForm" >
   <mat-form-field class="mat-form-field">
-    <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel  />
+    <input type="text" matInput placeholder="Nome" required name="nome" id="nome" ngModel  />
 
   </mat-form-field>
 <br>
     <label>Sexo: </label>
 <br>
-    <mat-radio-group aria-label="Select an option" name="sexo" id="sexo" ngModel >
+    <mat-radio-group aria-label="Select an option" required name="sexo" id="sexo" ngModel >
       <mat-radio-button value="M">Masculino</mat-radio-button>
       <mat-radio-button value="F">Feminino</mat-radio-button>
     </mat-radio-group>
     <br>
 <br>
   <mat-form-field class="mat-card-content">
-    <input type="date" matInput placeholder="Data de nascimento" name="dataNascimento" id="dataNascimento" ngModel  />
+    <input type="date" matInput placeholder="Data de nascimento" required name="dataNascimento" id="dataNascimento" ngModel  />
 
   </mat-form-field>
 <br>
   <mat-form-field class="mat-card-content">
-    <input type="email" matInput placeholder="Email" name="email" id="email" ngModel  />
+    <input type="email" matInput placeholder="Email" required name="email" id="email" ngModel  />
 
   </mat-form-field>
 <br>
   <mat-form-field class="mat-card-content">
-    <input type="password" matInput placeholder="Senha" name="senha" id="senha" ngModel  />
+    <input type="password" matInput placeholder="Senha" required name="senha" id="senha" ngModel  />
 
   </mat-form-field>
 <br>
   <mat-form-field class="mat-card-content">
-    <input type="password" matInput placeholder="Confirmar Senha" name="confirmarSenha" id="confirmarSenha" ngModel   />
+    <input type="password" matInput placeholder="Confirmar Senha" required name="confirmarSenha" id="confirmarSenha" ngModel   />
 
   </mat-form-field>
 <br>

@@ -6,23 +6,23 @@
 
   <form (ngSubmit)="salvar()" #terapiasForm="ngForm">
     <mat-form-field class="mat-form-field">
-      <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel/>
+      <input type="text" matInput placeholder="Nome" required name="nome" id="nome" ngModel/>
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="date" matInput placeholder="Data Comeco" name="dataComeco" id="dataComeco" ngModel/>
+      <input type="date" matInput placeholder="Data Comeco" required name="dataComeco" id="dataComeco" ngModel/>
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="date" matInput placeholder="Data fim" name="dataFim" id="dataFim" ngModel/>
+      <input type="date" matInput placeholder="Data fim" required name="dataFim" id="dataFim" ngModel/>
 
     </mat-form-field>
     <br>
     <br>
     <mat-form-field appearance="fill">
       <mat-label>Medicamento</mat-label>
-      <mat-select name="medicamentoUm" id="medicamentoUm" ngModel>
+      <mat-select required name="medicamentoUm" id="medicamentoUm" ngModel>
         <mat-option *ngFor="let medicamento of medicamentos" [value]="medicamento">
           {{medicamento.nome}}
         </mat-option>
@@ -30,12 +30,12 @@
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="number" matInput placeholder="Dose" name="doseUm" id="doseUm" ngModel/>
+      <input type="number" matInput placeholder="Dose" required name="doseUm" id="doseUm" ngModel/>
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="time" matInput placeholder="Intervalo" name="intervaloUm" id="intervaloUm" ngModel/>
+      <input type="time" matInput placeholder="Intervalo" required name="intervaloUm" id="intervaloUm" ngModel/>
 
     </mat-form-field>
     <br>
@@ -68,19 +68,19 @@
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="number" matInput placeholder="Dose" name="doseTres" id="doseTres" ngModel/>
+      <input type="number" matInput placeholder="Dose"  name="doseTres" id="doseTres" ngModel/>
 
     </mat-form-field>
     <br>
     <mat-form-field class="mat-form-field">
-      <input type="time" matInput placeholder="Intervalo" name="intervaloTres" id="intervaloTres" ngModel/>
+      <input type="time" matInput placeholder="Intervalo"  name="intervaloTres" id="intervaloTres" ngModel/>
 
     </mat-form-field>
 <br>
 
     <mat-form-field appearance="fill">
       <mat-label>Medico</mat-label>
-      <mat-select name="medico" id="medico" ngModel>
+      <mat-select required name="medico" id="medico" ngModel>
         <mat-option *ngFor="let medico of medicos" [value]="medico">
           {{medico.nome}}
         </mat-option>

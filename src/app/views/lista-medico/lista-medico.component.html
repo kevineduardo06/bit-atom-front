@@ -14,7 +14,7 @@
     <tr *ngFor="let medico of medicos ">
       <td>{{medico.nome}}</td>
       <td>
-      <button mat-button color="warn" (click)="excluir(medico.id)">Excluir</button>
+      <button mat-button color="warn" (click)="excluir(medico.id)" >Excluir</button>
       <button mat-button color="forest" (click)="editar(medico.id)">Editar</button>
       </td>
     </tr>

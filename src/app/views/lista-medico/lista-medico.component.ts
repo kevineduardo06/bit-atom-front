@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MedicoService} from '../../services/medico.service';
 import {Medico} from '../medico/medico.model';
 import {Router} from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-lista-medico',
@@ -35,8 +36,12 @@ export class ListaMedicoComponent implements OnInit {
   editar(id: number) {
     this.router.navigate([`/editarMedico/${id}`]);
   }
+  showErrorAlert() {
+      Swal.fire('Excluido!', 'Excluido com sucesso!', 'error');
+  }
 
   excluir(id: number) {
+    this.showErrorAlert();
     this.medicoService.excluir(id).subscribe(
       () => this.listar()
     );

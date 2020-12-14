@@ -7,6 +7,7 @@ import {Medicamento} from '../medicamento/medicamento.model';
 import {Medico} from '../medico/medico.model';
 import {MedicoService} from '../../services/medico.service';
 import {MedicamentoService} from '../../services/medicamento.service';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-edita-terapia',
@@ -62,6 +63,7 @@ export class EditaTerapiaComponent implements OnInit {
           doseTres: response['doseTres'],
           intervaloTres: response['intervaloTres'],
           medico: response['medico']
+
         })
 
     );
@@ -85,6 +87,7 @@ export class EditaTerapiaComponent implements OnInit {
     terapia.intervaloTres = this.terapiasForm.value.intervaloTres;
     terapia.medico = this.terapiasForm.value.medico;
     terapia.id = this.id;
+    terapia.idPaciente = LoginService.idLogado;
     this.terapiasService.salvar(terapia).subscribe(
       () => this.router.navigate(['/minhasTerapias'])
     );

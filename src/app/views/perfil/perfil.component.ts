@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Medico} from '../medico/medico.model';
 import {PacienteService} from '../../services/paciente.service';
 import {Paciente} from '../paciente/paciente.model';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-perfil',
@@ -18,11 +19,14 @@ export class PerfilComponent implements OnInit{
   constructor(
     private pacienteService: PacienteService,
     private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private paciente: Paciente,
+    private idLogado: LoginService
+    ) {
   }
 
-  consultar(id: number) {
-    this.pacienteService.consultar(id).subscribe(
+  consultar(id) {
+    this.pacienteService.consultar(this.paciente.id).subscribe(
       response =>
         this.pacienteForm.form.patchValue({nome: response['nome']})
 

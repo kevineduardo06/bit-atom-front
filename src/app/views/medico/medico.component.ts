@@ -3,6 +3,7 @@ import {FormControl, NgForm} from '@angular/forms';
 import {MedicoService} from '../../services/medico.service';
 import {Medico} from './medico.model';
 import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-medico',
@@ -21,6 +22,7 @@ constructor(private medicoService: MedicoService , private router: Router) {
 
     const medico = new Medico( );
     medico.nome = this.medicoForm.value.nome;
+    medico.idPaciente = LoginService.idLogado;
     this.medicoService.salvar(medico).subscribe(
       () => this.router.navigate(['/meusMedicos'])
     );

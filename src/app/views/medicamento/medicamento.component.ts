@@ -5,6 +5,7 @@ import {Medico} from '../medico/medico.model';
 import {Medicamento} from './medicamento.model';
 import {MedicamentoService} from '../../services/medicamento.service';
 import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-medicamento',
@@ -25,6 +26,7 @@ salvar(){
   medicamento.sintomaUm = this.medicamentoForm.value.sintomaUm;
   medicamento.sintomaDois = this.medicamentoForm.value.sintomaDois;
   medicamento.sintomaTres = this.medicamentoForm.value.sintomaTres;
+  medicamento.idPaciente = LoginService.idLogado;
   this.medicamentoService.salvar(medicamento).subscribe(
     () => this.router.navigate(['/meusMedicamentos'])
   );

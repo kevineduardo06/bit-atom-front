@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {Medicamento} from '../medicamento/medicamento.model';
 import {Usuario} from './login.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -14,26 +15,33 @@ import {Usuario} from './login.model';
 export class LoginComponent {
   @ViewChild('loginForm', {static: false}) loginForm: NgForm;
 
-  constructor(private loginService: LoginService, private router: Router){
+  constructor(private loginService: LoginService, private router: Router) {
 
   }
+  showErrorAlert() {
+    Swal.fire('Ops!', 'Preencha os campos corretamente!!', 'error')
+  }
+   alerta() {
+     alert('Preencha os campos corretamente');
+   }
+  logar() {
+    const logar = new Usuario();
+    logar.email = this.loginForm.value.email;
+    logar.senha = this.loginForm.value.senha;
+    this.loginService.logar(logar).subscribe(
+      (response) => {
 
-    logar(){
-      const logar = new Usuario( );
-      logar.email = this.loginForm.value.email;
-      logar.senha = this.loginForm.value.senha;
-      this.loginService.logar(logar).subscribe(
-        (response) => {
-
-          if(response != null){
-            LoginService.idLogado = (response as number);
-            this.router.navigate(['/home']);
+        if (response != null) {
+          LoginService.idLogado = (response as number);
+          this.router.navigate(['/home']);
+        } else {
+        this.showErrorAlert();
           }
 
-        }
-      );
-    }
 
+      }
+    );
+  }
 
 
 }

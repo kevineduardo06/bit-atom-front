@@ -4,7 +4,8 @@ export class Medicamento{
     public nome?: string,
     public sintomaUm?: string,
     public sintomaDois?: string,
-    public sintomaTres?: string
+    public sintomaTres?: string,
+    public idPaciente?: number
   ) {
   }
 

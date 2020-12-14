@@ -6,11 +6,11 @@
 
 <ng-form (ngSubmit)="salvar()" #medicamentoForm="ngForm">
   <mat-form-field class="mat-form-field">
-    <input type="text" matInput placeholder="Nome" name="nome" id="nome" ngModel />
+    <input type="text" matInput placeholder="Nome" required name="nome" id="nome" ngModel />
   </mat-form-field>
 <br>
   <mat-form-field class="mat-form-field">
-    <input type="text" matInput placeholder="Sintoma" name="sintomaUm" id="sintomaUm" ngModel />
+    <input type="text" matInput placeholder="Sintoma" required name="sintomaUm" id="sintomaUm" ngModel />
   </mat-form-field>
 <br>
   <mat-form-field class="mat-form-field">

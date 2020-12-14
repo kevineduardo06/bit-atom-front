@@ -4,6 +4,7 @@ import {MedicoService} from '../../services/medico.service';
 import {Router} from '@angular/router';
 import {Terapia} from '../terapias/terapia.model';
 import {TerapiasService} from '../../services/terapias.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-lista-terapias',
@@ -23,7 +24,9 @@ export class ListaTerapiasComponent implements OnInit {
   ngOnInit(): void {
     this.listar();
   }
-
+  showErrorAlert() {
+    Swal.fire('Excluido!', 'Excluido com sucesso!', 'error');
+  }
   listar() {
     this.terapiasService.buscarTodos()
       .subscribe(
@@ -39,6 +42,7 @@ export class ListaTerapiasComponent implements OnInit {
   }
 
   excluir(id: number) {
+    this.showErrorAlert();
     this.terapiasService.excluir(id).subscribe(
       () => this.listar()
     );

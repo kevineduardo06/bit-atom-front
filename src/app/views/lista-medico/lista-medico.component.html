@@ -1,17 +1,18 @@
 <app-toolbar-completa></app-toolbar-completa>
-<h1>Meus Médicos</h1>
+<h1 style="text-align:center">Meus Médicos</h1>
 
 <mat-card class="mat-card-content">
   <table class="container">
     <thead>
     <tr >
-
+      <th></th>
       <th>Nome</th>
       <th>Ações</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let medico of medicos ">
+      <img src="/assets/img/doctor.png" alt="image">
       <td>{{medico.nome}}</td>
       <td>
       <button mat-button color="warn" (click)="excluir(medico.id)" >Excluir</button>
@@ -20,7 +21,4 @@
     </tr>
     </tbody>
   </table>
-
-
-
 </mat-card>

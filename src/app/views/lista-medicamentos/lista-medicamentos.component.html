@@ -1,17 +1,18 @@
 <app-toolbar-completa></app-toolbar-completa>
-<h1>Meus Medicamentos</h1>
+<h1 style="text-align:center">Meus Medicamentos</h1>
 
 <mat-card class="mat-card-content">
-  <table >
+  <table>
     <thead>
-    <tr >
-
+    <tr>
+      <th></th>
       <th>Nome</th>
       <th>Ações</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let medicamento of medicamentos ">
+      <img src="/assets/img/medical_tablet.png" alt="image">
       <td>{{medicamento.nome}}</td>
       <td>
         <button mat-button color="warn" (click)="excluir(medicamento.id)">Excluir</button>
